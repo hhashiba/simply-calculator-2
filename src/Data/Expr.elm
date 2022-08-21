@@ -100,7 +100,11 @@ calculator lhs rhs op =
             lhs + rhs
 
         Sub ->
-            lhs - rhs
+            if lhs < rhs then
+                0
+
+            else
+                lhs - rhs
 
         Mul ->
             lhs * rhs

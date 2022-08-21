@@ -5257,7 +5257,7 @@ var $author$project$Data$Expr$calculator = F3(
 			case 'Add':
 				return lhs + rhs;
 			case 'Sub':
-				return lhs - rhs;
+				return (_Utils_cmp(lhs, rhs) < 0) ? 0 : (lhs - rhs);
 			case 'Mul':
 				return lhs * rhs;
 			case 'Div':
