@@ -124,8 +124,13 @@ showExpr expr =
                     ""
 
                 Just _ ->
-                    (expr.lhs |> unwrapMaybeInt |> String.fromInt)
-                        ++ (expr.operator |> stringFromOp)
+                    (expr.lhs
+                        |> unwrapMaybeInt
+                        |> String.fromInt
+                    )
+                        ++ (expr.operator
+                                |> stringFromOp
+                           )
 
         Just _ ->
             case expr.lhs of
@@ -133,9 +138,17 @@ showExpr expr =
                     ""
 
                 Just _ ->
-                    (expr.lhs |> unwrapMaybeInt |> String.fromInt)
-                        ++ (expr.operator |> stringFromOp)
-                        ++ (expr.rhs |> unwrapMaybeInt |> String.fromInt)
+                    (expr.lhs
+                        |> unwrapMaybeInt
+                        |> String.fromInt
+                    )
+                        ++ (expr.operator
+                                |> stringFromOp
+                           )
+                        ++ (expr.rhs
+                                |> unwrapMaybeInt
+                                |> String.fromInt
+                           )
 
 
 unwrapMaybeInt : Maybe Int -> Int
